@@ -14,5 +14,8 @@ public class Mahasiswamain23 {
         Mahasiswa23 mhs2 = new Mahasiswa23("Annisa Nabila", "2141720160", "TI 2L", 3.25);
         mhs2.updateIPK(3.30);
         mhs2.tampilkanInformasi();
+
+        Mahasiswa23 mhs3 = new Mahasiswa23("Andreas", "214109839028", "TI 3K", 3.22);
+        mhs3.tampilkanInformasi();
     }
 }
