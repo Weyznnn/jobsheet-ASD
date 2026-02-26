@@ -22,16 +22,13 @@ public class DosenDemo23 {
             
             arrayOfDosen[i] = new Dosen23(kode, nama, jenisKelamin, usia);
         }
-        for (Dosen23 dosen23 : arrayOfDosen) {
-            int i = 0;
-            System.out.println("Data Dosen: ke-" + (i + 1));
-            System.out.println("Kode: " + dosen23.kode);
-            System.out.println("Nama: " + dosen23.nama);
-            System.out.println("Jenis Kelamin: " + (dosen23.jenisKelamin ? "Laki-laki" : "Wanita"));
-            System.out.println("Usia: " + dosen23.usia);
-            System.out.println("-----------------------------");
-            i++;
-        }
         sc.close();
+
+        DataDosen23.dataSemuaDosen(arrayOfDosen);
+        DataDosen23.jumlahDosenPerJenisKelamin(arrayOfDosen);
+        DataDosen23.rerataUsiaDosenPerJenisKelamin(arrayOfDosen);
+        DataDosen23.infoDosenPalingTua(arrayOfDosen);
+        DataDosen23.infoDosenPalingMuda(arrayOfDosen);
+        
     }
 }
