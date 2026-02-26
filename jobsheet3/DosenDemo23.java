@@ -9,10 +9,10 @@ public class DosenDemo23 {
 
         for (int i = 0; i < arrayOfDosen.length; i++) {
             System.out.println("Masukkan data dosen ke-" + (i + 1));
+            System.out.print("kode: ");
+            String kode = sc.nextLine();
             System.out.print("Nama: ");
             String nama = sc.nextLine();
-            System.out.print("Kode: ");
-            String kode = sc.nextLine();
             System.out.print("Jenis Kelamin (Laki/Wanita): ");
             String jenisKelaminString = sc.nextLine();
             boolean jenisKelamin = jenisKelaminString.equalsIgnoreCase("Laki");
@@ -23,7 +23,14 @@ public class DosenDemo23 {
             arrayOfDosen[i] = new Dosen23(kode, nama, jenisKelamin, usia);
         }
         for (Dosen23 dosen23 : arrayOfDosen) {
-            dosen23.printData();
+            int i = 0;
+            System.out.println("Data Dosen: ke-" + (i + 1));
+            System.out.println("Kode: " + dosen23.kode);
+            System.out.println("Nama: " + dosen23.nama);
+            System.out.println("Jenis Kelamin: " + (dosen23.jenisKelamin ? "Laki-laki" : "Wanita"));
+            System.out.println("Usia: " + dosen23.usia);
+            System.out.println("-----------------------------");
+            i++;
         }
         sc.close();
     }

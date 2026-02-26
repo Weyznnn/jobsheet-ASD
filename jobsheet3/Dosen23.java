@@ -12,11 +12,4 @@ public class Dosen23 {
         this.jenisKelamin = jenisKelamin;
         this.usia = usia;
     }
-    public void printData() {
-        System.out.println("Nama: " + nama);
-        System.out.println("Kode: " + kode);
-        System.out.println("Jenis Kelamin: " + (jenisKelamin ? "Laki" : "Wanita"));
-        System.out.println("Usia: " + usia);
-        System.out.println("-----------------------------");
-    }
 }
