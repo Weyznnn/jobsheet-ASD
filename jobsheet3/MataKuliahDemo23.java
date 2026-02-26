@@ -7,9 +7,13 @@ public class MataKuliahDemo23 {
         Scanner sc = new Scanner(System.in);
         MatakKuliah23[] arrayOfMatakuliah = new MatakKuliah23[3];
         String kode, nama, dummy;
-        int sks, jumlahJam;
+        int sks, jumlahJam, jumlahMatakuliah;
 
-        for (int i = 0; i < 3; i++) {
+        System.out.print("Masukkan jumlah matakuliah: ");
+        jumlahMatakuliah = Integer.parseInt(sc.nextLine());
+        arrayOfMatakuliah = new MatakKuliah23[jumlahMatakuliah];
+
+        for (int i = 0; i < jumlahMatakuliah; i++) {
             System.out.println("Masukkan data matakuliah ke-" + (i + 1));
             System.out.print("Kode: ");
             kode = sc.nextLine();
@@ -26,12 +30,28 @@ public class MataKuliahDemo23 {
             arrayOfMatakuliah[i] = new MatakKuliah23(kode, nama, sks, jumlahJam);
         }
 
-        for (int i = 0; i < 3; i++) {
+        do {
+            System.out.print("Apakah ingin menambah data matakuliah? (y/n): ");
+            String input = sc.nextLine();
+            if (input.equalsIgnoreCase("n")) {
+                break;
+            }
+            System.out.print("Masukkan indeks matakuliah yang ingin ditambah data: ");
+            int index = Integer.parseInt(sc.nextLine());
+            if (index >= 0 && index < jumlahMatakuliah) {
+                System.out.print("Masukkan SKS baru: ");
+                int sksBaru = Integer.parseInt(sc.nextLine());
+                System.out.print("Masukkan jumlah jam baru: ");
+                int jumlahJamBaru = Integer.parseInt(sc.nextLine());
+                arrayOfMatakuliah[index].tambahData(sksBaru, jumlahJamBaru);
+            } else {
+                System.out.println("Indeks tidak valid.");
+            }
+        } while (true);
+
+        for (int i = 0; i < jumlahMatakuliah; i++) {
             System.out.println("Data matakuliah ke-" + (i + 1));
-            System.out.println("Kode: " + arrayOfMatakuliah[i].kode);
-            System.out.println("Nama: " + arrayOfMatakuliah[i].nama);
-            System.out.println("SKS: " + arrayOfMatakuliah[i].sks);
-            System.out.println("Jumlah Jam: " + arrayOfMatakuliah[i].jumlahJam);
+            arrayOfMatakuliah[i].cetakInfo();
             System.out.println("------------------------------");
         }
         sc.close();
