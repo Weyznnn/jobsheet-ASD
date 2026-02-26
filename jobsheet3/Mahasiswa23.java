@@ -1,6 +1,8 @@
 package jobsheet3;
 
 public class Mahasiswa23 {
-    public String nim, nama, kelas;
+    public String nim;
+    public String nama;
+    public String kelas;
     public float ipk;
 }
