@@ -17,5 +17,14 @@ public class SortingMain23 {
         dataurut2.SelectionSort();
         System.out.println("Data sudah diurutkan dengan SELECTION SORT (ASC)");
         dataurut2.tampil();
+
+        // Data untuk Insertion Sort
+        int c[] = {40, 10, 4, 9, 3};
+        Sorting23 dataurut3 = new Sorting23(c, c.length);
+        System.out.println("Data awal 3");
+        dataurut3.tampil();
+        dataurut3.insertionSort();
+        System.out.println("Data sudah diurutkan dengan INSERTION SORT (ASC)");
+        dataurut3.tampil();
     }
 }
