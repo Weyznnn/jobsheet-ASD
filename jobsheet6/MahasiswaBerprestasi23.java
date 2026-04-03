@@ -29,4 +29,18 @@ public class MahasiswaBerprestasi23 {
             }
         }
     }
+
+    void selectionSort() {
+        for (int i = 0; i < listMhs.length - 1; i++) {
+            int idxMax = i;
+            for (int j = i + 1; j < listMhs.length; j++) {
+                if (listMhs[j].ipk > listMhs[idxMax].ipk) {
+                    idxMax = j;
+                }
+            }
+            Mahasiswa23 tmp = listMhs[idxMax];
+            listMhs[idxMax] = listMhs[i];
+            listMhs[i] = tmp;
+        }
+    }
 }

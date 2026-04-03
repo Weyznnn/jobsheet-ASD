@@ -37,6 +37,10 @@ public class MahasiswaDemo23 {
         list.bubbleSort();
         list.tampil();
 
+        System.out.println("Data mahasiswa setelah sorting berdasarkan IPK (DESC) dengan selection sort:");
+        list.selectionSort();
+        list.tampil();
+
         sc.close();
     }
 }
