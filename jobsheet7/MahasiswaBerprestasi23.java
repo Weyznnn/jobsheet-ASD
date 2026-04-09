@@ -94,6 +94,21 @@ public class MahasiswaBerprestasi23 {
         return -1;
     }
 
+    int findBinarySearchDesc(double cari, int left, int right) {
+        int mid;
+        if (right >= left) {
+            mid = (left + right) / 2;
+            if (cari == listMhs[mid].ipk) {
+                return (mid);
+            } else if (listMhs[mid].ipk < cari) {
+                return findBinarySearchDesc(cari, left, mid - 1);
+            } else {
+            return findBinarySearchDesc(cari, mid + 1, right);
+            }
+        }
+        return -1;
+    }
+
     void tampilPosisi(double x, int pos) {
         if (pos != -1) {
             System.out.println("Data mahasiswa dengan IPK: " + x + " ditemukan pada indeks " + pos);

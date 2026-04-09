@@ -29,19 +29,19 @@ public class MahasiswaDemo23 {
 
         list.tampil();
         //melakukan pencarian data sequential
-        System.out.println("------------------------------------------------");
-        System.out.println("Pencarian Data");
-        System.out.println("------------------------------------------------");
-        System.out.println("Masukkan IPK mahasiswa yang ingin dicari: ");
-        System.out.print("IPK: ");
-        double cariSequential = sc.nextDouble();
+        // System.out.println("------------------------------------------------");
+        // System.out.println("Pencarian Data");
+        // System.out.println("------------------------------------------------");
+        // System.out.println("Masukkan IPK mahasiswa yang ingin dicari: ");
+        // System.out.print("IPK: ");
+        // double cariSequential = sc.nextDouble();
         
         
-        System.out.println("Menggunakan sequential searching");
-        double posisi = list.sequentialSearch(cariSequential);
-        int pss = (int) posisi;
-        list.tampilPosisi(cariSequential, pss);
-        list.tampilDataSearch(cariSequential, pss);
+        // System.out.println("Menggunakan sequential searching");
+        // double posisi = list.sequentialSearch(cariSequential);
+        // int pss = (int) posisi;
+        // list.tampilPosisi(cariSequential, pss);
+        // list.tampilDataSearch(cariSequential, pss);
         
         //melakukan pencarian data Binary
         System.out.println("------------------------------------------------");
@@ -51,9 +51,9 @@ public class MahasiswaDemo23 {
         System.out.print("IPK: ");
         double cariBinary = sc.nextDouble();
         System.out.println("------------------------------------------------");
-        System.out.println("Menggunakan Binary Search");
+        System.out.println("Menggunakan Binary Search DESC");
         System.out.println("------------------------------------------------");
-        double posisiBinary = list.findBinarySearch(cariBinary, 0, jumMhs - 1);
+        double posisiBinary = list.findBinarySearchDesc(cariBinary, 0, jumMhs - 1);
         int pssBinary = (int) posisiBinary;
         list.tampilPosisi(cariBinary, pssBinary);
         list.tampilDataSearch(cariBinary, pssBinary);
