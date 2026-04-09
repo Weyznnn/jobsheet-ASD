@@ -4,7 +4,10 @@ public class MahasiswaDemo23 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         MahasiswaBerprestasi23 list = new MahasiswaBerprestasi23();
-        int jumMhs = 5;
+        int jumMhs;
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        jumMhs = sc.nextInt();
+        sc.nextLine();
 
         // Mahasiswa23 m1 = new Mahasiswa23("123", "Zidan", "2A", 3.2);
         // Mahasiswa23 m2 = new Mahasiswa23("124", "Ayu", "2A", 3.5);
