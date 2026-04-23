@@ -34,11 +34,13 @@ public class MahasiswaDemo23 {
                     Mahasiswa23 dinilai = stack.pop();
                     if (dinilai != null) {
                         System.out.println("Menilai tugas dari " + dinilai.nama);
-                        System.out.println("Masukkan nilai (0-100): ");
+                        System.out.print("Masukkan nilai (0-100): ");
                         int nilai = sc.nextInt();
                         sc.nextLine();
                         dinilai.tugasDinilai(nilai);
                         System.out.printf("Nilai Tugas %s adalah %d\n", dinilai.nama, nilai);
+                        String biner = stack.konversiDesimalKeBiner(nilai);
+                        System.out.println("Nilai biner Tugas: " + biner);
                     }
                     break;
                 case 3:
@@ -60,6 +62,9 @@ public class MahasiswaDemo23 {
                     System.out.println("Daftar semua Tugas");
                     System.out.println("Nama\tNIM\tKelas");
                     stack.print();
+                    break;
+                case 7:
+                    System.out.println("Keluar dari program.");
                     break;
                 default:
                     System.out.println("Pilihan tidak valid.");
