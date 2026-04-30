@@ -31,12 +31,18 @@ public class QueueMain23 {
                     System.out.print("Masukkan data baru: ");
                     int data = sc.nextInt();
                     sc.nextLine();
-                    Q.enqueue(data);
+                    boolean isOverflow = Q.enqueue(data);
+                    if (isOverflow) {
+                        pilih = 0;
+                    }
                     break;
                 case 2:
                     int dataKeluar = Q.dequeue();
                     if (dataKeluar != 0) {
                         System.out.println("Data yang dikeluarkan: " + dataKeluar);
+                    }
+                    if (Q.isEmpty()) {
+                        pilih = 0;
                     }
                     break;
                 case 3:
