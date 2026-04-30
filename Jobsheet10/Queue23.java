@@ -64,7 +64,7 @@ public class Queue23 {
             if (isEmpty()) {
                 front = rear = 0;
             } else {
-                if (rear == max) {
+                if (rear == max - 1) {
                     rear = 0;
                 } else {
                     rear++;
@@ -85,7 +85,7 @@ public class Queue23 {
             if (isEmpty()) {
                 front = rear = -1;
             } else {
-                if (front == max) {
+                if (front == max - 1) {
                     front = 0;
                 } else {
                     front++;
