@@ -41,6 +41,7 @@ public class MainDemo {
 
                     Pembeli pembeli = new Pembeli(nama, noHP);
                     antrianPembeli.addLast(pembeli);
+                    System.out.println("Antrian berhasil ditambahkan dengan nomor: " + (antrianPembeli.size+1));
                     break;
                 case 2:
                     //Cetak antrian

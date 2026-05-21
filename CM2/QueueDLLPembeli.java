@@ -19,6 +19,7 @@ public class QueueDLLPembeli {
             tail.next = newNode;
             newNode.prev = tail;
             tail = newNode;
+            size++;
         }
     }
 
@@ -33,6 +34,7 @@ public class QueueDLLPembeli {
             } else {
                 head = head.next;
                 head.prev = null;
+                size--;
             }
             return removeNode;
         }
